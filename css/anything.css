@@ -1,0 +1,59 @@
+/* Assuming your container has a class name 'grid-container' */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 25%); /* Three columns, each 25% of the container's width */
+  justify-content: center; /* Centers the grid in the container along the main axis */
+  align-items: center; /* Centers the grid items along the cross axis */
+  gap: 10px; /* Adjust the gap as needed for spacing between grid items */
+  width: 90%;
+  margin: 0 auto; /* This will center your container */
+  background-color: blue;
+}
+
+/* Assuming your grid items have a class name 'grid-item' */
+.grid-item {
+  /* Styles for the children elements, if necessary */
+}
+
+/* Ensure that images within grid items do not overflow their boundaries */
+.grid-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* This will cover the area of the grid item, potentially cropping the image */
+}
+
+/* Additional responsive layout for mobile view at 450px */
+@media (max-width: 450px) {
+  .grid-container {
+    /* Adjust the grid-template-columns for a single column layout if necessary */
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-item {
+    /* Adjust styles for the children elements for mobile view */
+  }
+}
+
+
+@media only screen and (max-width: 400px) {
+    /* CSS rules for screens smaller than 400px */
+  }
+
+@media only screen and (min-width: 401px) and (max-width: 1200px) {
+  /* CSS rules for screens between 401px and 1200px */
+}
+
+@media only screen and (min-width: 1201px) {
+    /* CSS rules for screens larger than 1201px */
+}
+
+@media (min-width: 600px) {
+    .container {
+      background-color: green; /* Changes the background to green */
+    }
+  
+    .item:nth-child(4n) {
+      grid-column: 1 / -1; /* Makes every fourth item span the entire row */
+    }
+}
+  
